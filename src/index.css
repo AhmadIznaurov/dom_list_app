@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.list-group-item:hover {
+  background-color: red;
+}
+
+.list-group-item  > a{
+  font-family: "Microsoft JhengHei UI Light";
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.spanic-international {
+  font-family: BlinkMacSystemFont;
+  font-size: 27px;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.spanic-international > img {
+  border-radius: 60px;
+  height: 90px;
+  width: 90px;
+}
