@@ -10,7 +10,9 @@ export const Albums = (props) => {
     const dispatch = useDispatch();
     const {id} = useParams()
     useEffect(() => {
-        dispatch(loadAlbums(id))
+        if(id !== undefined) {
+            dispatch(loadAlbums(id))
+        }
     }, [id])
 
 

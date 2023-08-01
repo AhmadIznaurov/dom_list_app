@@ -2,7 +2,7 @@ import '../index.css';
 import {Users} from "./Users";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
-import {loadAlbums, loadUsers} from "../redux/action";
+import { loadUsers} from "../redux/action";
 import {Albums} from "./Albums";
 import {Route, Routes} from "react-router-dom";
 
@@ -12,7 +12,6 @@ function App() {
 
     useEffect(() => {
         dispatch(loadUsers())
-        dispatch((loadAlbums()))
     }, [])
 
 
