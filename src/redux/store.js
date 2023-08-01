@@ -2,7 +2,8 @@ import {applyMiddleware, combineReducers, createStore} from "redux";
 import {createLogger} from "redux-logger";
 import thunk from "redux-thunk";
 import {usersReducers} from "./usersReducer";
-import {todosReducers} from "./todosReducer";
+import {albumsReducers} from "./albumsReducers";
+
 
 
 const logger = createLogger({
@@ -12,7 +13,7 @@ const logger = createLogger({
 
 const rootState = combineReducers({
     users: usersReducers,
-    todos: todosReducers
+    albums: albumsReducers
 })
 
 export const store = createStore(rootState, applyMiddleware(thunk, logger))
