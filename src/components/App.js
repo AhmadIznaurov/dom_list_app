@@ -1,9 +1,10 @@
 import '../index.css';
-import {Todos} from "./Todos";
 import {Users} from "./Users";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
-import {loadUsers} from "../redux/action";
+import {loadAlbums, loadUsers} from "../redux/action";
+import {Albums} from "./Albums";
+import {Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -11,15 +12,25 @@ function App() {
 
     useEffect(() => {
         dispatch(loadUsers())
+        dispatch((loadAlbums()))
     }, [])
 
+
   return (
-    <div className="container">
-     <Users />
-
-      {/*<Todos />*/}
-
-    </div>
+      <Routes>
+          <Route path='/:id?'
+                 element={
+              <div className="container">
+              <div className='row'>
+                  <div className='col-3'>
+                      <Users />
+                  </div>
+                  <div className='col-7'>
+                      <Albums />
+                  </div>
+              </div>
+          </div>} />
+      </Routes>
   );
 }
 

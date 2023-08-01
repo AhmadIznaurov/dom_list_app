@@ -1,21 +1,21 @@
 const initialState = {
-    todos: [],
+    albums: [],
     loading: false
 }
 
 
-export const todosReducers = (state = initialState, action) => {
+export const albumsReducers = (state = initialState, action) => {
     switch (action.type) {
-        case 'todos/load/start':
+        case 'albums/load/start':
             return {
                 ...state,
                 loading: true
             }
-        case 'todos/load/success':
+        case 'albums/load/success':
             return {
                 ...state,
                 loading: false,
-                todos: action.payload
+                albums: action.payload
             }
 
         default:
